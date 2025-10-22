@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.Eventing.Reader;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,23 +7,30 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EjerciciosController : ControllerBase
+    public class InstrumentsController : ControllerBase
     {
-        private static List<string> instruments = new() { "Guitarra", "Batería", "Piano" };
-        // GET: api/<EjerciciosController>
+       
 
-        
+        // GET: api/<EjerciciosController>
         [HttpGet] 
         public IEnumerable<string> Get()
         {
-            return instruments;
+            return InstrumentRepository.Instruments;
         }
 
         // GET api/<EjerciciosController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<string> Get(int id)
         {
-            return "value";
+            if (id < InstrumentRepository.Instruments.Count) {
+                return BadRequest("No existe un instrumento con ese ID");
+            }
+            else
+            {
+                return Ok(InstrumentRepository.Instruments[id]);
+            }
+            
+            
         }
 
         // POST api/<EjerciciosController>
@@ -30,7 +38,7 @@ namespace WebApplication1.Controllers
         public ActionResult<string> AddInstrument([FromBody] string newInstrument)
 
         {
-            instruments.Add(newInstrument);
+            InstrumentRepository.Instruments.Add(newInstrument);
             return Ok("Instrumento agregado: {newInstrument}");
         }
 
@@ -38,8 +46,8 @@ namespace WebApplication1.Controllers
         [HttpPut("{id}")]
         public ActionResult<string> Put(int id, [FromBody] string updatedInstrument)
         {
-            if (id <= instruments.Count) {
-                instruments[id] = updatedInstrument;
+            if (id >= InstrumentRepository.Instruments.Count) {
+                InstrumentRepository.Instruments[id] = updatedInstrument;
                 return Ok($"Instrumento en la posicion {id} actualizado a {updatedInstrument}");
             }
 
@@ -55,10 +63,10 @@ namespace WebApplication1.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            if (id<= instruments.Count)
+            if (id<= InstrumentRepository.Instruments.Count)
             {
-                var eliminado = instruments[id];
-                instruments.RemoveAt(id);
+                var eliminado = InstrumentRepository.Instruments[id];
+                InstrumentRepository.Instruments.RemoveAt(id);
                 return Ok($"Instrumento eliminado: {eliminado}");
 
             }
