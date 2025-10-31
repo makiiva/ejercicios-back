@@ -21,6 +21,202 @@
   },
   {
     "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerEmpleadoMasGrande",
+    "RelativePath": "api/Northwind/api/EmpleadoMasGrande",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ejercicioORM.Modelo.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerEmpleadoPorPais",
+    "RelativePath": "api/Northwind/api/EmpleadoPorCountry/{country}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ejercicioORM.Modelo.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerEmpleadoPorTitulo",
+    "RelativePath": "api/Northwind/api/EmpleadoPorTitulo/{titulo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerNombreEmpleado",
+    "RelativePath": "api/Northwind/api/ObtenerEmpleadoPorNombre/{nombre}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ejercicioORM.Modelo.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerEmpleadosPorTitulos",
+    "RelativePath": "api/Northwind/api/ObtenerEmpleadosPorTitulos/{titulo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ejercicioORM.Modelo.Employee, ejercicioORM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerIdEmpleado",
+    "RelativePath": "api/Northwind/api/ObtenerIdEmpleado/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ejercicioORM.Modelo.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerProductosConCategoria",
+    "RelativePath": "api/Northwind/api/ProductosConCategoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ejercicioORM.Query.ProductWithCategoryDTO, ejercicioORM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
+    "Method": "ObtenerProductosQueContienen",
+    "RelativePath": "api/Northwind/api/ProductosQueContienen/{palabra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "palabra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ejercicioORM.Modelo.Products, ejercicioORM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ejercicioORM.Controllers.NorthwindController",
     "Method": "GetAll",
     "RelativePath": "api/Northwind/api/TodosLosEmpleados",
     "HttpMethod": "GET",

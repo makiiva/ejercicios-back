@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ejercicioORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84263429213da3e4d22eac677cd52e3a52a48561")]
 [assembly: System.Reflection.AssemblyProductAttribute("ejercicioORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ejercicioORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

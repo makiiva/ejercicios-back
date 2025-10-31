@@ -71,3 +71,4 @@ D:\ejercicios .net\ejercicioORM\obj\Debug\net8.0\refint\ejercicioORM.dll
 D:\ejercicios .net\ejercicioORM\obj\Debug\net8.0\ejercicioORM.pdb
 D:\ejercicios .net\ejercicioORM\obj\Debug\net8.0\ejercicioORM.genruntimeconfig.cache
 D:\ejercicios .net\ejercicioORM\obj\Debug\net8.0\ref\ejercicioORM.dll
+D:\ejercicios .net\ejercicioORM\obj\Debug\net8.0\ejercicioORM.sourcelink.json
