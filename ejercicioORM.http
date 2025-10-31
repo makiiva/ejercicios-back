@@ -1,0 +1,6 @@
+@ejercicioORM_HostAddress = http://localhost:5277
+
+GET {{ejercicioORM_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
